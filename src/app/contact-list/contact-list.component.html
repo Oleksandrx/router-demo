@@ -1,0 +1,14 @@
+<table style="width:50%">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let contact of contacts" >
+    <td align="center">{{ contact.name }}</td>
+    <td align="center">{{ contact.email }}</td>
+    <td align="center">
+    <a [routerLink]="['/contact', contact.id]">Go to details</a>
+    </td>
+  </tr>
+</table>
